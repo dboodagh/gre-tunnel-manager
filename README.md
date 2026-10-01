@@ -1,8 +1,8 @@
 # GRE Tunnel Manager
 
-Manage multiple IPv4 GRE tunnels and TCP/UDP port forwarding on Ubuntu 24.04. Connect one Iran entry server to several remote VPN servers, with editable addresses, ports, and persistent settings.
+Manage multiple IPv4 GRE tunnels and TCP/UDP port forwarding on Ubuntu 24.04 or higher. Connect one main entry server to several remote VPN servers, with editable addresses, ports, and persistent settings.
 
-The launcher is one Bash file, `GRETUN.sh`, containing a Python 3 standard-library core. No Python packages are needed. This configures GRE and iptables; install SoftEther/OpenVPN separately.
+The launcher is one Bash file, `GRETUN.sh`, containing a Python 3 standard-library core. No Python packages are needed. This configures GRE and iptables;
 
 ## Features
 
@@ -11,7 +11,7 @@ The launcher is one Bash file, `GRETUN.sh`, containing a Python 3 standard-libra
 - Forward TCP, UDP, or both, with optional port translation.
 - Forward to the **remote GRE address**, correcting the original script's local-address DNAT error.
 - Save profiles as JSON and restore them at boot through systemd.
-- Preserve other firewall chains, including XRayMesh, and reject conflicting port mappings.
+- Preserve other firewall chains, and reject conflicting port mappings.
 - Import the original `/etc/gre-tunnel.conf` and reuse its matching `gre1` interface.
 - Back up edited configuration and installed files.
 
