@@ -70,17 +70,17 @@ Here, external UDP 1533 forwards to remote UDP 1402. Use `none` to disable forwa
 
 On the remote VPN server, set public forwarding to `none` and allow the local VPN listener using **Local service ports to allow over GRE**, for example `1402`.
 
-The OpenVPN client's `remote` must use the Iran server's public IP and external port. The client protocol must match the actual server listener. Forwarding both protocols does not enable a missing listener or repair SoftEther's DHCP/NAT settings.
+The OpenVPN client's `remote` must use the main server's public IP and external port. The client protocol must match the actual server listener. Forwarding both protocols does not enable a missing listener or repair SoftEther's DHCP/NAT settings.
 
 ## Multiple remote servers
 
-Create one profile per remote server on Iran and a reverse profile on each remote server:
+Create one profile per remote server on main and a reverse profile on each remote server:
 
 - First remote: inner addresses `10.10.10.1/30` and `10.10.10.2`.
 - Second remote: inner addresses `10.10.20.1/30` and `10.10.20.2`.
 - Third remote: inner addresses `10.10.30.1/30` and `10.10.30.2`.
 
-Reverse the local/remote addresses at the other endpoint. Each connection needs a unique subnet and interface on the Iran server. Each external port/protocol on the same public IP can point to only one destination; port translation lets different remote servers use the same internal VPN port.
+Reverse the local/remote addresses at the other endpoint. Each connection needs a unique subnet and interface on the main server. Each external port/protocol on the same public IP can point to only one destination; port translation lets different remote servers use the same internal VPN port.
 
 See the [full setup guide](docs/INSTALL.md#connect-multiple-remote-servers-to-one-iran-server) for both endpoints, saved JSON, migration, verification, and troubleshooting details. Public IP addresses in the guide are placeholders.
 
