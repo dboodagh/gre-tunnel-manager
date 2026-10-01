@@ -123,6 +123,6 @@ GitHub Actions runs these checks on Ubuntu 24.04. Tests extract the embedded Pyt
 
 Live Linux packet forwarding, reboot behavior, and SoftEther interoperability have not been verified by this test suite. GRE provides encapsulation without encryption; the VPN protocol supplies encryption.
 
-## Background
+## CREDIT
 
 This manager was developed to replace the single-tunnel workflow in [diyakou/GRE-TUN](https://github.com/diyakou/GRE-TUN), adding per-tunnel configuration and correcting the forwarding destination.
